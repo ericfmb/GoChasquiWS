@@ -25,6 +25,7 @@ namespace gochasqui
         private int _id_tiponegocio = 0;
         private DateTime _fecha_ini = DateTime.Now;
         private bool _abierto = true;
+        private bool _agenda = true;
 
         private string _error = "";
         //Propiedades públicas
@@ -39,6 +40,7 @@ namespace gochasqui
         public int id_tiponegocio { get { return _id_tiponegocio; } set { _id_tiponegocio = value; } }
         public DateTime fecha_ini { get { return _fecha_ini; } set { _fecha_ini = value; } }
         public bool abierto { get { return _abierto; } set { _abierto = value; } }
+        public bool agenda { get { return _agenda; } set { _agenda = value; } }
 
         public string error { get { return _error; } set { _error = value; } }
         #endregion
@@ -49,7 +51,7 @@ namespace gochasqui
             _id_cliente = Id_cliente;
             RecuperarDatos();
         }
-        public cliente(string Tipo_operacion, int Id_cliente, string Razon_social, string Nit, string Paterno, string Materno, string Nombre, bool Activo, int Id_tipocliente, int Id_tiponegocio, DateTime Fecha_ini, bool Abierto)
+        public cliente(string Tipo_operacion, int Id_cliente, string Razon_social, string Nit, string Paterno, string Materno, string Nombre, bool Activo, int Id_tipocliente, int Id_tiponegocio, DateTime Fecha_ini, bool Abierto, bool Agenda)
         {
             _tipo_operacion = Tipo_operacion;
             _id_cliente = Id_cliente;
@@ -63,6 +65,7 @@ namespace gochasqui
             _id_tiponegocio = Id_tiponegocio;
             _fecha_ini = Fecha_ini;
             _abierto = Abierto;
+            _agenda = Agenda;
         }
         #endregion
 
@@ -93,6 +96,7 @@ namespace gochasqui
                 db1.AddOutParameter(cmd, "id_tiponegocio", DbType.Int32, 32);
                 db1.AddOutParameter(cmd, "fecha_ini", DbType.DateTime, 30);
                 db1.AddOutParameter(cmd, "abierto", DbType.Boolean, 1);
+                db1.AddOutParameter(cmd, "agenda", DbType.Boolean, 1);
                 db1.ExecuteNonQuery(cmd);
 
                 _razon_social = (string)db1.GetParameterValue(cmd, "razon_social");
@@ -105,6 +109,7 @@ namespace gochasqui
                 _id_tiponegocio = (int)db1.GetParameterValue(cmd, "id_tiponegocio");
                 _fecha_ini = (DateTime)db1.GetParameterValue(cmd, "fecha_ini");
                 _abierto = (Boolean)db1.GetParameterValue(cmd, "abierto");
+                _agenda = (Boolean)db1.GetParameterValue(cmd, "agenda");
             }
             catch { }
         }
@@ -127,6 +132,7 @@ namespace gochasqui
                 db1.AddInParameter(cmd, "id_tiponegocio", DbType.Int32, _id_tiponegocio);
                 db1.AddInParameter(cmd, "fecha_ini", DbType.DateTime, _fecha_ini);
                 db1.AddInParameter(cmd, "abierto", DbType.Boolean, _abierto);
+                db1.AddInParameter(cmd, "agenda", DbType.Boolean, _agenda);
                 db1.AddInParameter(cmd, "id_usuario_aux", DbType.Int32, context_id_usuario);
                 db1.AddOutParameter(cmd, "id_cliente_aux", DbType.Int32, 32);
                 db1.AddOutParameter(cmd, "descripcionpr", DbType.String, 250);
