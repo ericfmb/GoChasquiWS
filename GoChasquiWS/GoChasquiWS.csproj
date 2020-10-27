@@ -65,18 +65,18 @@
     <Content Include="WSGoChasqui.svc" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\cliente\cliente.cs" />
+    <Content Include="App_Code\driver\tipo_motorizado.cs" />
     <Compile Include="App_Code\gochasqui_ws\IWSGoChasqui.cs" />
+    <Content Include="App_Code\usuario\usuario.cs" />
+    <Content Include="App_Code\pedido\pedido.cs" />
+    <Content Include="App_Code\parametro\tipo_pago.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WSGoChasqui.svc.cs">
       <DependentUpon>WSGoChasqui.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\cliente\" />
-    <Folder Include="App_Code\driver\" />
-    <Folder Include="App_Code\parametro\" />
-    <Folder Include="App_Code\pedido\" />
-    <Folder Include="App_Code\usuario\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
