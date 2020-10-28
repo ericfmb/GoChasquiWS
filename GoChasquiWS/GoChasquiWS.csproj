@@ -89,6 +89,13 @@
     <Content Include="App_Code\cliente\tipo_negocio.cs" />
     <Content Include="App_Code\cliente\horario.cs" />
     <Content Include="App_Code\driver\cobro_frecuencia.cs" />
+    <Content Include="App_Code\driver\documento_driver.cs" />
+    <Content Include="App_Code\driver\driver.cs" />
+    <Content Include="App_Code\driver\driver_usuario.cs" />
+    <Content Include="App_Code\driver\motorizado.cs" />
+    <Content Include="App_Code\driver\ruta.cs" />
+    <Content Include="App_Code\driver\ruta_detalle.cs" />
+    <Content Include="App_Code\gochasqui_ws\cobro_servicio.cs" />
     <Compile Include="App_Code\gochasqui_ws\IWSGoChasqui.cs" />
     <Content Include="App_Code\usuario\usuario.cs" />
     <Content Include="App_Code\pedido\pedido.cs" />
@@ -96,6 +103,10 @@
     <Content Include="App_Code\pedido\pedido_detalle.cs" />
     <Content Include="App_Code\pedido\tipo_cargo_extra.cs" />
     <Content Include="App_Code\pedido\tipo_estado.cs" />
+    <Content Include="App_Code\gochasqui_ws\parametro_ganancia.cs" />
+    <Content Include="App_Code\pedido\estado_pedido.cs" />
+    <Content Include="App_Code\pedido\pedido_cargo_extra.cs" />
+    <Content Include="App_Code\pedido\pedido_envio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WSGoChasqui.svc.cs">
       <DependentUpon>WSGoChasqui.svc</DependentUpon>
