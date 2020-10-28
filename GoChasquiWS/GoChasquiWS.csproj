@@ -87,6 +87,7 @@
     <Content Include="App_Code\cliente\multimedia_cliente.cs" />
     <Content Include="App_Code\cliente\tipo_cliente.cs" />
     <Content Include="App_Code\cliente\tipo_negocio.cs" />
+    <Content Include="App_Code\cliente\horario.cs" />
     <Compile Include="App_Code\gochasqui_ws\IWSGoChasqui.cs" />
     <Content Include="App_Code\usuario\usuario.cs" />
     <Content Include="App_Code\pedido\pedido.cs" />
