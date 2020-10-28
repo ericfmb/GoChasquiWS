@@ -91,6 +91,9 @@
     <Content Include="App_Code\usuario\usuario.cs" />
     <Content Include="App_Code\pedido\pedido.cs" />
     <Content Include="App_Code\parametro\tipo_pago.cs" />
+    <Content Include="App_Code\pedido\pedido_detalle.cs" />
+    <Content Include="App_Code\pedido\tipo_cargo_extra.cs" />
+    <Content Include="App_Code\pedido\tipo_estado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WSGoChasqui.svc.cs">
       <DependentUpon>WSGoChasqui.svc</DependentUpon>
